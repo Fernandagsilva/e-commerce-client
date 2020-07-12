@@ -5,20 +5,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { CoreModule } from './core/core.module';
+import { ShopModule } from './shop/shop.module';
+import { ProductItemComponent } from './product-item/product-item.component';
+import { ProducItemsModule } from './product-item/product-item.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavBarComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CoreModule,
+    ShopModule,
+    ProducItemsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
