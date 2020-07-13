@@ -9,6 +9,7 @@ import { CoreModule } from './core/core.module';
 import { ShopModule } from './shop/shop.module';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProducItemsModule } from './product-item/product-item.module';
+import { HomeModule } from './home/home/home.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { ProducItemsModule } from './product-item/product-item.module';
     CoreModule,
     ShopModule,
     ProducItemsModule,
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
