@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <h4>Erro Interno No Servidor - Recarregando a página o erro sumirá.</h4>
+  <ng-container *ngIf="error">
+    <h5 class="text-danger">Erro: {{ error.message }}</h5>
+    <p class="font-weight-bold">O que fazer?</p>
+    <ol>
+      <li>Abra o dev tools do chrome</li>
+      <li>Inspecione a aba de 'network'</li>
+      <li>Abra a requisição com falha</li>
+      <li>Certifique-se de que a requisição está correta</li>
+      <li>
+        Reproduza o erro no Postman, se o erro ocorrer mesmo assim, a falha não
+        é com o Angular.
+      </li>
+    </ol>
+    <code class="mt-5" style="background-color: whitesmoke;">
+      {{ error.details }}</code
+    >
+  </ng-container>
+</div>
