@@ -1,0 +1,32 @@
+<div class="bg-light px-4 py-3 text-uppercase font-weight-bold">
+  Pedido
+</div>
+<div class="p-4">
+  <p class="font-italic mb-4">
+    O valor final vai depender das mercadorias escolhidas.
+  </p>
+  <ul class="list-unstyled mb-4" *ngIf="basketTotals$ | async">
+    <li class="d-flex justify-content-between py-3 border-bottom">
+      <strong class="text-muted">Descontos</strong>
+      <strong>
+        {{
+          (basketTotals$ | async).shipping | currency: "BRL":"symbol"
+        }}</strong
+      >
+    </li>
+    <li class="d-flex justify-content-between py-3 border-bottom">
+      <strong class="text-muted">Subtotal</strong>
+      <strong>
+        {{
+          (basketTotals$ | async).subtotal | currency: "BRL":"symbol"
+        }}</strong
+      >
+    </li>
+    <li class="d-flex justify-content-between py-3 border-bottom">
+      <strong class="text-muted">Total</strong>
+      <strong>
+        {{ (basketTotals$ | async).total | currency: "BRL":"symbol" }}</strong
+      >
+    </li>
+  </ul>
+</div>
